@@ -9,11 +9,14 @@ public class Ground : MonoBehaviour
     {
         startX = transform.position.x;
         startY = transform.position.y;
-        
     }
 
     
     void Update()
+    {
+        Move();
+    }
+    private void Move()
     {
         if (transform.position.x <= -(startX - 2))
         {
@@ -22,5 +25,4 @@ public class Ground : MonoBehaviour
         transform.Translate(transform.right * speed);
     }
 
-    
 }

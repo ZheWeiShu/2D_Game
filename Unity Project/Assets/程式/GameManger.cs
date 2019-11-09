@@ -16,4 +16,15 @@ public class GameManger : MonoBehaviour
     {
         
     }
+
+    private void SpawnPipe()
+    {
+
+    }
+
+    private void AddScore()
+    {
+
+    }
+
 }
