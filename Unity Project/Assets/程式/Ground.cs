@@ -9,6 +9,7 @@ public class Ground : MonoBehaviour
     {
         startX = transform.position.x;
         startY = transform.position.y;
+        
     }
 
     
@@ -20,4 +21,6 @@ public class Ground : MonoBehaviour
         }
         transform.Translate(transform.right * speed);
     }
+
+    
 }
