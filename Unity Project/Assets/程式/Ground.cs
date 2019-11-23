@@ -15,7 +15,7 @@ public class Ground : MonoBehaviour
     
     protected virtual void Update()
     {
-        
+        if (GameManger.gameover) return;
         Move();
     }
     protected virtual void Move()

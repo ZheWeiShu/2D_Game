@@ -402,7 +402,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 385303705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1967018391}
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &385303705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +688,6 @@ MonoBehaviour:
   jump: 200
   isDead: 0
   angle: 7
-  EndWindow: {fileID: 1274165280}
   goScore: {fileID: 848990156}
 --- !u!1 &716123040
 GameObject:
@@ -911,7 +921,7 @@ GameObject:
   - component: {fileID: 759461662}
   - component: {fileID: 759461661}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: "\u6700\u9AD8\u5206"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1753,7 +1763,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1888290186}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1967018391}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1888290186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1820,10 +1841,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  scoreText: {fileID: 848990160}
+  bestscoreText: {fileID: 759461663}
   scoreHight: 0
   pipe: {fileID: 6524105725888931732, guid: 4acac1bc9d448f34f832dacd1925f97f, type: 3}
   interval: 3
   pos: {fileID: 1996985910}
+  EndWindow: {fileID: 1274165280}
 --- !u!4 &1967018392
 Transform:
   m_ObjectHideFlags: 0

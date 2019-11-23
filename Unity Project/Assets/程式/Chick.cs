@@ -12,16 +12,21 @@ public class Chick : MonoBehaviour
     public float angle;
     //public float trunLeftSpeed;
     //public float trunRightSpeed;
-    public GameObject EndWindow,goScore;
+    public GameObject goScore;
     private Rigidbody2D r2D;
     //private bool startRotate;
     //private bool turnBack;
+    private GameManger GM;
 
-    
+    private void Awake()
+    {
+        Screen.SetResolution(500, 1280, false);
+    }
     void Start()
     {
-        r2D = GetComponent<Rigidbody2D>();
         
+        r2D = GetComponent<Rigidbody2D>();
+        GM = GameObject.Find("GM").GetComponent<GameManger>();
     }
     
     
@@ -44,9 +49,9 @@ public class Chick : MonoBehaviour
     }
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && EndWindow.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && GM.EndWindow.activeSelf == false)
         {
-            GameObject.Find("GM").GetComponent<GameManger>().enabled = true;
+            GM.enabled = true;
             goScore.SetActive(true);
             r2D.Sleep();
             r2D.gravityScale = 1;
@@ -57,11 +62,20 @@ public class Chick : MonoBehaviour
         
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("地板及水管"))
+        {
+            GM.GameOver();
+            
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("地板及水管"))
         {
-            //EndWindow.SetActive(true);
+            GM.GameOver();
+
         }
     }
 }
