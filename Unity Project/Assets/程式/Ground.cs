@@ -5,15 +5,17 @@ public class Ground : MonoBehaviour
     [SerializeField] private float speed;
     private float startX;
     private float startY;
+    
     void Start()
     {
         startX = transform.position.x;
         startY = transform.position.y;
     }
-
+    
     
     void Update()
     {
+        
         Move();
     }
     private void Move()

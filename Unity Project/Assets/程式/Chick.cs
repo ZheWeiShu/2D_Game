@@ -19,8 +19,9 @@ public class Chick : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
+        
     }
-
+    
     
     void Update()
     {
@@ -29,6 +30,7 @@ public class Chick : MonoBehaviour
         //Debug.Log(transform.rotation.z);
         if (Input.GetKeyDown(KeyCode.Mouse0) && EndWindow.activeSelf == false)
         {
+            GameObject.Find("GM").GetComponent<GameManger>().enabled = true;
             Rigidbody2D.gravityScale = 1;
             Jump();   
         }
