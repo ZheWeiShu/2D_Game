@@ -2,7 +2,7 @@
 
 public class Ground : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] protected float speed;
     private float startX;
     private float startY;
     
@@ -13,12 +13,12 @@ public class Ground : MonoBehaviour
     }
     
     
-    void Update()
+    protected virtual void Update()
     {
         
         Move();
     }
-    private void Move()
+    protected virtual void Move()
     {
         if (transform.position.x <= -(startX - 2))
         {
